@@ -9,7 +9,6 @@ import com.example.horoscapp.R
 import com.example.horoscapp.databinding.FragmentHoroscopeBinding
 
 class HoroscopeFragment : Fragment() {
-
     private var _binding: FragmentHoroscopeBinding? = null
     private val binding get() = _binding!!
     override fun onCreateView(
