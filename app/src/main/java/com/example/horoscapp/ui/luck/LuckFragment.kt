@@ -14,6 +14,7 @@ class LuckFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        _binding = FragmentLuckBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
 }
