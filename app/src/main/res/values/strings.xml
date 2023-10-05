@@ -5,4 +5,15 @@
     <string name="horoscope">HOROSCOPE</string>
     <string name="luck">LUCK</string>
     <string name="palmistry">PALMISTRY</string>
+    <string name="aries">Aries</string>
+    <string name="aquario">Aquario</string>
+    <string name="cancer">Cancer</string>
+    <string name="carpicornio">Capricornio</string>
+    <string name="escorpio">Escorpio</string>
+    <string name="geminis">Geminis</string>
+    <string name="leo">Leo</string>
+    <string name="libra">Libra</string>
+    <string name="piscis">Piscis</string>
+    <string name="sagitario">Sagitario</string>
+    <string name="tauro">Tauro</string>
 </resources>
