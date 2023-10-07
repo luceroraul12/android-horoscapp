@@ -8,9 +8,11 @@ import com.example.horoscapp.domain.model.HoroscopeInfo
 class HoroscopeViewHolder(view: View): RecyclerView.ViewHolder(view) {
 
     private val binding = ItemHoroscopeBinding.bind(view)
-    fun render(item: HoroscopeInfo){
+    fun render(item: HoroscopeInfo, onItemSelected: (HoroscopeInfo) -> Unit){
         val context = binding.tvHoroscope.context
         binding.ivHoroscope.setImageResource(item.image)
         binding.tvHoroscope.text = context.getString(item.name)
+
+        binding.clParent.setOnClickListener { onItemSelected(item) }
     }
 }

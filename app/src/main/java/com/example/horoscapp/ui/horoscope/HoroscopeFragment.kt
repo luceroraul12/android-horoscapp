@@ -1,17 +1,19 @@
 package com.example.horoscapp.ui.horoscope
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.horoscapp.databinding.FragmentHoroscopeBinding
+import com.example.horoscapp.domain.model.HoroscopeInfo
 import com.example.horoscapp.ui.horoscope.adapter.HoroscopeAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -45,7 +47,7 @@ class HoroscopeFragment : Fragment() {
     }
 
     private fun initList() {
-        horoscopeAdapter = HoroscopeAdapter()
+        horoscopeAdapter = HoroscopeAdapter() {onItemSelected(it)}
 
         binding.rvHoroscope.apply {
             layoutManager = GridLayoutManager(context, 2)
@@ -63,5 +65,7 @@ class HoroscopeFragment : Fragment() {
         }
     }
 
-//
+    private fun onItemSelected(item: HoroscopeInfo): Unit {
+        Log.i("horoscopo", "clickeado")
+    }
 }
