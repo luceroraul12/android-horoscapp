@@ -17,7 +17,7 @@ class HoroscopeAdapter(private var list: List<HoroscopeInfo> = emptyList(),
     override fun getItemCount(): Int = list.size
 
     override fun onBindViewHolder(holder: HoroscopeViewHolder, position: Int) {
-        holder.render(list.get(position)) {onItemSelected}
+        holder.render(list.get(position)) {onItemSelected(it)}
     }
 
     fun updateList(list: List<HoroscopeInfo>){
